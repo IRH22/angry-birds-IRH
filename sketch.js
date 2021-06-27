@@ -12,6 +12,8 @@ var resor, resorte;
 
 var fondoI;
 
+var estado = "ligado";
+
 
 
 function preload(){
@@ -47,6 +49,8 @@ function setup(){
   
     
     resor = new Resortera(bird.body, {x:90, y:80});
+
+    gfondo();
   
 }
 
@@ -78,22 +82,35 @@ function draw(){
   
     textSize(25);
     text("score "+score, 700, 50)
+
+    cerdo1.score();
+    cerdo2.score()
   
 }
 
 function mouseReleased(){
   resor.fly();
+  estado = "libre";
 
 }
 
 function mouseDragged(){
-  Matter.Body.setPosition(bird.body, {x:mouseX, y:mouseY})
-     
+  if (estado === "ligado"){
+    Matter.Body.setPosition(bird.body, {x:mouseX, y:mouseY})
+  } 
 }
 
 function keyPressed(){
   if (keyCode === 32){
+    Matter.Body.setPosition(bird.body, {x:90, y:80})
     resor.regresa(bird.body);
+    estado = "ligado";
   }
   
+}
+
+function gfondo(){
+  var fecha = new Date();
+  var hora = fecha.getHours();
+  console.log(hora)
 }
