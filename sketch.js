@@ -14,12 +14,16 @@ var fondoI;
 
 var estado = "ligado";
 
+var bg = "Imagenes/fondo.PNG"
+
 
 
 function preload(){
   
-  fondoI = loadImage("Imagenes/fondo.PNG");
   
+  gfondo();
+  
+
 }
 
 
@@ -50,7 +54,7 @@ function setup(){
     
     resor = new Resortera(bird.body, {x:90, y:80});
 
-    gfondo();
+  
   
 }
 
@@ -85,6 +89,8 @@ function draw(){
 
     cerdo1.score();
     cerdo2.score()
+
+    
   
 }
 
@@ -113,4 +119,12 @@ function gfondo(){
   var fecha = new Date();
   var hora = fecha.getHours();
   console.log(hora)
+  if (hora >= 06 && hora < 16){
+    bg = "Imagenes/fondo.PNG"
+  }
+  else{
+    bg = "Imagenes/bg2.jpg"
+  }
+  fondoI = loadImage(bg);
+
 }
