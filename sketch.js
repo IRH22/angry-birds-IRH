@@ -10,7 +10,7 @@ var score = 0;
 
 var resor, resorte;
 
-var fondoI;
+var fondoI, flecha;
 
 var estado = "ligado";
 
@@ -54,7 +54,7 @@ function setup(){
     
     resor = new Resortera(bird.body, {x:90, y:80});
 
-  
+    flecha = new Flecha();
   
 }
 
@@ -83,6 +83,8 @@ function draw(){
     resor.display();
   
     piso.display();
+
+    flecha.display();
   
     textSize(25);
     text("score "+score, 700, 50)
