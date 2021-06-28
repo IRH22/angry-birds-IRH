@@ -83,14 +83,16 @@ function draw(){
     resor.display();
   
     piso.display();
-
-    flecha.display();
   
     textSize(25);
     text("score "+score, 700, 50)
 
     cerdo1.score();
-    cerdo2.score()
+    cerdo2.score();
+
+    if (score > 19){
+      flecha.display();
+    }
 
     
   
