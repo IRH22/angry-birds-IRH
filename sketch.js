@@ -16,14 +16,13 @@ var estado = "ligado";
 
 var bg = "Imagenes/fondo.PNG";
 
-var isl, isl1
-
+var bird1 = "Imagenes/bird.png"
+//var bird2 = ""
 
 
 function preload(){
   
-  gfondo();
-  isl = loadImage("Imagenes/jay_jake_jim.png");  
+  gfondo(); 
 
 }
 
@@ -36,7 +35,7 @@ function setup(){
     piso = new Ground(600,height,1200,20);
     plataforma = new Ground(150, 340, 300, 170);
    
-    bird = new Bird(100,100);
+    bird = new Bird(100,100, bird1);
     
     caja1 = new Box(700, 320, 70, 70);
     cerdo1 =  new Pig(810, 350, 20, 20);
@@ -93,7 +92,6 @@ function draw(){
 
     if (score > 19){
       estrella.display();
-      isl1.addImage(isl)
 
     }
 
