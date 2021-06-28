@@ -54,7 +54,7 @@ function setup(){
     
     resor = new Resortera(bird.body, {x:90, y:80});
 
-    flecha = new Flecha();
+    estrella = new Flecha();
   
 }
 
@@ -91,7 +91,7 @@ function draw(){
     cerdo2.score();
 
     if (score > 19){
-      flecha.display();
+      estrella.display();
     }
 
     

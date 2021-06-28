@@ -1,7 +1,7 @@
 class Flecha{
     constructor(){
        
-       this.arrow= loadImage("Imagenes/flecha1.png");
+       this.arrow= loadImage("Imagenes/star.png");
       
        World.add(world, this.arrow)
     }
