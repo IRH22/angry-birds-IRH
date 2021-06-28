@@ -9,7 +9,6 @@ class Flecha{
     
     display(){
        image(this.arrow, 350, 5);  
-       
     }
   
 }

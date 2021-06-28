@@ -14,15 +14,16 @@ var fondoI, flecha;
 
 var estado = "ligado";
 
-var bg = "Imagenes/fondo.PNG"
+var bg = "Imagenes/fondo.PNG";
+
+var isl, isl1
 
 
 
 function preload(){
   
-  
   gfondo();
-  
+  isl = loadImage("Imagenes/jay_jake_jim.png");  
 
 }
 
@@ -92,6 +93,8 @@ function draw(){
 
     if (score > 19){
       estrella.display();
+      isl1.addImage(isl)
+
     }
 
     
